@@ -2,6 +2,7 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix,accuracy_score,classification_report
 
 # variables
 data = pd.read_csv('sport_data.csv')
@@ -16,5 +17,12 @@ x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.3)
 # Building machine learning Model
 clf = DecisionTreeClassifier()
 clf.fit(x_train,y_train)
-print(clf)
+
+# testing the machine learning model
+test = clf.predict(x_test)
+print(test)
+print(y_test)
+# ckecking for efficacy
+accuracy = accuracy_score(y_test,test)
+print(accuracy)
 
