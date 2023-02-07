@@ -13,5 +13,8 @@ y = data.drop(columns=['Age','Height','Sex'])
 
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.3)
 
-
+# Building machine learning Model
+clf = DecisionTreeClassifier()
+clf.fit(x_train,y_train)
+print(clf)
 
