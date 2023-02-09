@@ -8,6 +8,7 @@
                 <div class="card-body">
                     <form method="POST">
                         {% csrf_token %}
+                        {{form}}
                         <input class="btn btn-info" type="submit" value="Make Prediction">
                     </form>
                 </div>
