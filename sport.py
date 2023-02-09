@@ -2,8 +2,9 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix,accuracy_score,classification_report
-#from sklearn.externals import joblib
+from sklearn.metrics import confusion_matrix,accuracy_score,classification_report,pair_confusion_matrix
+from matplotlib import pyplot as plt
+#from sklearn.metrics import plot_confusion_matrix
 import joblib
 
 # variables
@@ -25,5 +26,6 @@ test = clf.predict(x_test)
 # ckecking for efficacy
 accuracy = accuracy_score(y_test,test)
 print(accuracy)
-joblib.dump(clf,'ml_sport_model.joblib')
+#joblib.dump(clf,'ml_sport_model.joblib')
+
 
