@@ -2,5 +2,5 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def index(self):
-    pass
+def index(request):
+    return render(request,'dasboard/index.html')
