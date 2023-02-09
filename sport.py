@@ -26,6 +26,7 @@ test = clf.predict(x_test)
 # ckecking for efficacy
 accuracy = accuracy_score(y_test,test)
 print(accuracy)
+print(classification_report(y_test,test))
 #joblib.dump(clf,'ml_sport_model.joblib')
 
 
