@@ -18,7 +18,7 @@ def index(request):
 
 
 def prediction(request):
-    predicted_sports = Data.objects.all()
+    predicted_sports = Data.objects.all().order_by('-id')
     context = {
         'predicted_sports':predicted_sports
     }
